@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Zoom Avatar Bot - Iron Man Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <span class="arc-reactor">⚡</span>
+                    <h1>AI Avatar Bot</h1>
+                </div>
+                <div class="subtitle">Iron Man Edition • Powered by HeyGen</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="status-card">
+                <h2>Bot Status</h2>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="label">Status:</span>
+                        <span class="value" id="bot-status">Offline</span>
+                        <span class="indicator" id="status-indicator"></span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">In Meeting:</span>
+                        <span class="value" id="in-meeting">No</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Speaking:</span>
+                        <span class="value" id="is-speaking">No</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Participants:</span>
+                        <span class="value" id="participants">0</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Queued Messages:</span>
+                        <span class="value" id="queued-messages">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-card">
+                <h2>Controls</h2>
+                <div class="button-group">
+                    <button id="start-btn" class="btn btn-primary">
+                        <span class="btn-icon">▶️</span>
+                        Start Avatar Bot
+                    </button>
+                    <button id="stop-btn" class="btn btn-danger" disabled>
+                        <span class="btn-icon">⏹️</span>
+                        Stop Avatar Bot
+                    </button>
+                    <button id="refresh-btn" class="btn btn-secondary">
+                        <span class="btn-icon">🔄</span>
+                        Refresh Status
+                    </button>
+                </div>
+            </div>
+
+            <div class="manual-control-card">
+                <h2>Manual Control</h2>
+                <div class="input-group">
+                    <textarea 
+                        id="speak-text" 
+                        placeholder="Enter text for the avatar to speak (as Iron Man)..." 
+                        rows="3"
+                    ></textarea>
+                    <button id="speak-btn" class="btn btn-accent" disabled>
+                        <span class="btn-icon">🗣️</span>
+                        Make Avatar Speak
+                    </button>
+                </div>
+            </div>
+
+            <div class="logs-card">
+                <h2>Activity Log</h2>
+                <div id="logs" class="logs-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>🤖 AI Avatar Bot • Created for seamless meeting attendance</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
