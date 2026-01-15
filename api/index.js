@@ -1,7 +1,7 @@
-import { Server } from './server.js';
+import { Server } from '../src/server.js';
 
-const server = new Server();
-server.start();
+// Create server instance
+const serverInstance = new Server();
 
-// Export for Vercel serverless
-export default server.app;
+// For Vercel serverless, export the express app
+export default serverInstance.app;
