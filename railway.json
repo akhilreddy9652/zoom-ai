@@ -1,0 +1,6 @@
+version: 2
+services:
+  web:
+    startCommand: npm start
+    healthcheckPath: /api/health
+    healthcheckTimeout: 300
