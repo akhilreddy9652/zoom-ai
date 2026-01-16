@@ -145,8 +145,9 @@ export class Server {
 
     start() {
         const port = config.server.port;
+        const host = '0.0.0.0'; // Listen on all network interfaces for Railway
 
-        this.app.listen(port, () => {
+        this.app.listen(port, host, () => {
             console.log(`\n${'='.repeat(60)}`);
             console.log(`🚀 AI Avatar Bot Server Running`);
             console.log(`${'='.repeat(60)}`);
