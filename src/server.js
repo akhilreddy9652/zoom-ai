@@ -21,8 +21,29 @@ export class Server {
     }
 
     setupRoutes() {
-        // Health check
+        // Root path - Railway health check
+        this.app.get('/', (req, res) => {
+            res.json({
+                name: 'AI Zoom Avatar Bot',
+                status: 'online',
+                version: '1.0.0',
+                endpoints: {
+                    health: '/health',
+                    apiHealth: '/api/health',
+                    start: '/api/start',
+                    stop: '/api/stop',
+                    status: '/api/status',
+                    speak: '/api/speak'
+                }
+            });
+        });
+
+        // Health check endpoints
         this.app.get('/health', (req, res) => {
+            res.json({ status: 'ok', timestamp: new Date().toISOString() });
+        });
+
+        this.app.get('/api/health', (req, res) => {
             res.json({ status: 'ok', timestamp: new Date().toISOString() });
         });
 
